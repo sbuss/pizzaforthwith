@@ -1,20 +1,20 @@
 package dominos
 
 import (
-    "fmt"
-    "testing"
-    "time"
+	"fmt"
+	"testing"
+	"time"
 )
 
 // Helper function for asserting equality
 func assertEqual(t *testing.T, b1, b2 interface{}, s string) {
-    if b1 != b2 {
-        t.Errorf(s)
-    }
+	if b1 != b2 {
+		t.Errorf(s)
+	}
 }
 
 func TestUnmarshall(t *testing.T) {
-    data := `
+	data := `
     <soap:Envelope>
         <soap:Body>
             <GetTrackerDataResponse>
@@ -30,30 +30,20 @@ func TestUnmarshall(t *testing.T) {
     </soap:Envelope>
     `
 
-    response, err := UnmarshalXML([]byte(data))
-    if err != nil {
-        t.Errorf("error: %v", err)
-    }
-    assertEqual(t, len(response.Statuses), 0, "# of statuses incorrect.")
+	response, err := UnmarshalXML([]byte(data))
+	if err != nil {
+		t.Errorf("error: %v", err)
+	}
+	assertEqual(t, len(response.Statuses), 0, "# of statuses incorrect.")
 
-    loc, _ := time.LoadLocation("America/New_York")
-    assertEqual(t, response.Timestamp.Location().String(), loc.String(),
-        fmt.Sprintf("Timestamp in wrong location: %s != %s",
-            response.Timestamp.Location(), loc))
-    assertEqual(t, response.Version, "1.5", "Version does not match")
-    assertEqual(t, response.Query.StoreID, "6228", "Store ID does not match")
+	loc, _ := time.LoadLocation("America/New_York")
+	assertEqual(t, response.Timestamp.Location().String(), loc.String(),
+		fmt.Sprintf("Timestamp in wrong location: %s != %s",
+			response.Timestamp.Location(), loc))
+	assertEqual(t, response.Version, "1.5", "Version does not match")
+	assertEqual(t, response.Query.StoreID, "6228", "Store ID does not match")
 }
 
-func get(params url.Values) ([]byte, error) {
-    return []byte(`abcdef`)
-}
-
-func TestGet(t *testing.T) {
-    s, err := Status("1234567890")
-    if err != nil {
-        t.Error(err)
-    }
-}
 /*
 func TestGet(t *testing.T) {
     data := `
