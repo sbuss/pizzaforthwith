@@ -44,6 +44,16 @@ func TestUnmarshall(t *testing.T) {
     assertEqual(t, response.Query.StoreID, "6228", "Store ID does not match")
 }
 
+func get(params url.Values) ([]byte, error) {
+    return []byte(`abcdef`)
+}
+
+func TestGet(t *testing.T) {
+    s, err := Status("1234567890")
+    if err != nil {
+        t.Error(err)
+    }
+}
 /*
 func TestGet(t *testing.T) {
     data := `
