@@ -1,0 +1,49 @@
+<soap:Envelope>
+    <soap:Body>
+        <GetTrackerDataResponse>
+            <Version>1.5</Version>
+            <Query>
+                <StoreID>7188</StoreID>
+                <OrderKey>718891262826</OrderKey>
+            </Query>
+            <AsOf>2010-02-08T20:49:38</AsOf>
+            <OrderStatuses>
+                <OrderStatus>
+                    <Version>1.4</Version>
+                    <AsOfTime>2010-02-08T11:42:12</AsOfTime>
+                    <StoreAsOfTime>2010-02-08T17:48:27</StoreAsOfTime>
+                    <StoreID>7188</StoreID>
+                    <OrderID>2010-02-08#5262</OrderID>
+                    <Phone></Phone>
+                    <ServiceMethod>Delivery</ServiceMethod>
+                    <AdvancedOrderTime/>
+                    <OrderDescription>
+                        1 X-Large(16″) Brooklyn Pizza w/ Extra Ham, Extra Premium Chicken, Extra Anchovies, Extra Shredded Provolone Cheese
+                        1 Buffalo Chicken Sandwich
+                        1 Side Marinara Sauce Cup
+                    </OrderDescription>
+                    <OrderTakeCompleteTime>2010-02-08T11:13:53</OrderTakeCompleteTime>
+                    <TakeTimeSecs>39</TakeTimeSecs>
+                    <CsrID>Power</CsrID>
+                    <CsrName/>
+                    <OrderSourceCode>Web</OrderSourceCode>
+                    <OrderStatus>Complete</OrderStatus>
+                    <StartTime>2010-02-08T11:13:53</StartTime>
+                    <MakeTimeSecs>757</MakeTimeSecs>
+                    <OvenTime>2010-02-08T11:26:30</OvenTime>
+                    <OvenTimeSecs>390</OvenTimeSecs>
+                    <RackTime>2010-02-08T11:33:00</RackTime>
+                    <RackTimeSecs>11</RackTimeSecs>
+                    <RouteTime>2010-02-08T11:33:11</RouteTime>
+                    <DriverID>0288</DriverID>
+                    <DriverName>Cecil</DriverName>
+                    <OrderDeliveryTimeSecs>1368</OrderDeliveryTimeSecs>
+                    <DeliveryTime>2010-02-08T11:36:41</DeliveryTime>
+                    <OrderKey>718891262826</OrderKey>
+                    <ManagerID>9413</ManagerID>
+                    <ManagerName>Kelly</ManagerName>
+                </OrderStatus>
+            </OrderStatuses>
+        </GetTrackerDataResponse>
+    </soap:Body>
+</soap:Envelope>
